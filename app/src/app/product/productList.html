@@ -1,4 +1,3 @@
-<div cg-busy="{promise:vm.queryPromise,message:'Loading',backdrop:true,minDuration:1000}"></div>
 
 <div class="alert alert-success alert-dismissible" role="alert" ng-show="addSuccess">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -34,7 +33,7 @@
     </div>
 
     <!-- Table -->
-    <table class="table table-hover">
+    <table class="table table-hover" cg-busy="{promise:vm.queryPromise,message:'Loading',backdrop:true,minDuration:5000}">
         <tr>
             <th>#</th>
             <th translate>listProduct.name </th>

@@ -7,7 +7,8 @@
       'ngResource',
       'pascalprecht.translate',
       'flow',
-      'ngResource+apiPrefix'
+      'ngResource+apiPrefix',
+      'cgBusy'
     ]);
 
 })();

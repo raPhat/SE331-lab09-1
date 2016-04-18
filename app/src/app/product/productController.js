@@ -36,10 +36,10 @@
   function listProductController($scope, $http, $rootScope, productService, $route, queryProductService) {
     //$http.get("/product/").success(function (data) {
     var vm = this;
-    var data = productService.query(function () {
+    vm.queryPromise = productService.query(function (data) {
       // $scope.totalNetPrice= totalCalService.getTotalNetPrice(data);
       vm.products = data;
-    });
+    }).$promise;
     $scope.$on('$locationChangeStart', function (event) {
       $rootScope.addSuccess = false;
       $rootScope.editSuccess = false;

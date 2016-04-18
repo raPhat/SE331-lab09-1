@@ -33,7 +33,7 @@
   };
 
   /** @ngInject */
-  function listProductController($scope, $http, $rootScope, productService, $route, totalCalService, queryProductService) {
+  function listProductController($scope, $http, $rootScope, productService, $route, queryProductService) {
     //$http.get("/product/").success(function (data) {
     var vm = this;
     var data = productService.query(function () {
@@ -70,7 +70,7 @@
     vm.addPerson = false;
     vm.editPerson = true;
     var id = $routeParams.id;
-    $http.get("/product/" + id).success(function (data) {
+    $http.get("http://localhost:8080/product/" + id).success(function (data) {
       vm.product = data;
     });
 

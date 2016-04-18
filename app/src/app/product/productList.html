@@ -4,12 +4,12 @@
         <span aria-hidden="true">&times;</span></button>
     <strong>Success!</strong> Success adding a new product
 </div>
-<div class="alert alert-success alert-dismissible" role="alert" ng-show="editSuccess">
+<div class="alert alert-success alert-dismissible" role="alert" ng-show="vm.editSuccess">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span></button>
     <strong>Success!</strong> Success edit the product
 </div>
-<div class="alert alert-success alert-dismissible" role="alert" ng-show="deleteSucess">
+<div class="alert alert-success alert-dismissible" role="alert" ng-show="vm.deleteSucess">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span></button>
     <strong>Success!</strong> Success delete the product
@@ -57,7 +57,7 @@
                 </div>
             </td>
             <td class="text-center"><a ng-href="#/editProduct/{{product.id}}"> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
-            <td class="text-center"><a ng-href="#/listProduct"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" ng-click="deleteProduct(product.id)"></span></a></td>
+            <td class="text-center"><a ng-href="#/listProduct"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true" ng-click="vm.deleteProduct(product.id)"></span></a></td>
         </tr>
         <tr>
             <th></th>

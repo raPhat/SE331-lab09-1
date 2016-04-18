@@ -6,7 +6,8 @@
       'ngRoute',
       'ngResource',
       'pascalprecht.translate',
-      'flow'
+      'flow',
+      'ngResource+apiPrefix'
     ]);
 
 })();
